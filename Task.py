@@ -72,7 +72,7 @@ class Vector:
                     except TypeError as e:
                         print("TypeError : " + str(e))
                     break
-            if not(len(v) > 1 and v[1] is not None):
+            if (len(v) <= 1 or v[1] is None):
                 try:
                     raise TypeError("Any[Tuple[Any[float, int]], List[Tuple[Any[float, int]]]")
                 except TypeError as e:
@@ -223,3 +223,4 @@ class Vector:
             return (False)
 
 Vector((1,))
+
