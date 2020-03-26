@@ -90,8 +90,8 @@ class Vector:
         for i in other.v:
             l2 += i ** 2
         l2 = math.sqrt(l2)
-        print(math.fabs(l1 - l2) < EPSILON)
-        return math.fabs(l1 - l2) < EPSILON
+        print(math.fabs(l1 - l2) <= EPSILON)
+        return math.fabs(l1 - l2) <= EPSILON
 
     def __lt__(self, other):
         "<"
@@ -109,7 +109,7 @@ class Vector:
         for i in other.v:
             l2 += i ** 2
         l2 = math.sqrt(l2)
-        tr1 = (math.fabs(l1 - l2) < EPSILON)
+        tr1 = (math.fabs(l1 - l2) <= EPSILON)
 
         if tr1:
             print(False)
@@ -135,7 +135,7 @@ class Vector:
         for i in other.v:
             l2 += i ** 2
         l2 = math.sqrt(l2)
-        tr1 = (math.fabs(l1 - l2) < EPSILON)
+        tr1 = (math.fabs(l1 - l2) <= EPSILON)
         if tr1 or (l1 < l2 or l1 <= l2):
             print("True")
             return True
@@ -158,7 +158,7 @@ class Vector:
         for i in other.v:
             l2 += i ** 2
         l2 = math.sqrt(l2)
-        tr1 = (math.fabs(l1 - l2) < EPSILON)
+        tr1 = (math.fabs(l1 - l2) <= EPSILON)
 
         if tr1:
             print("Fasle")
@@ -182,7 +182,7 @@ class Vector:
         for i in other.v:
             l2 += i ** 2
         l2 = math.sqrt(l2)
-        tr1 = (math.fabs(l1 - l2) < EPSILON)
+        tr1 = (math.fabs(l1 - l2) <= EPSILON)
 
         if tr1:
             print(False)
@@ -207,7 +207,8 @@ class Vector:
             l2 += i ** 2
         l1 = math.sqrt(l1)
         l2 = math.sqrt(l2)
-        tr1 = (math.fabs(l1 - l2) < EPSILON)
+        tr1 = (math.fabs(l1 - l2) <= EPSILON)
+
         if tr1 or (l1 > l2 or l1 >= l2):
             print("True")
             return True
@@ -215,6 +216,4 @@ class Vector:
             print("False")
             return (False)
 
-
-Vector((1,))
 
